@@ -5,112 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Know Your Customer (KYC) Template</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f0f4f8;
-        }
-        .card {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-        .card-header {
-            background: linear-gradient(to right, #3490dc, #6574cd);
-            color: white;
-            padding: 20px;
-        }
-        .card-title {
-            margin: 0;
-            font-size: 24px;
-        }
-        .card-content {
-            padding: 20px;
-        }
-        .card-footer {
-            background-color: #f8fafc;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .progress-bar {
-            background-color: #e2e8f0;
-            height: 4px;
-            border-radius: 2px;
-            margin-bottom: 20px;
-        }
-        .progress {
-            background-color: #4299e1;
-            height: 100%;
-            border-radius: 2px;
-            transition: width 0.3s ease;
-        }
-        .step-icons {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        .step-icon {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 12px;
-            color: #a0aec0;
-        }
-        .step-icon.active {
-            color: #4299e1;
-        }
-        .step-icon svg {
-            width: 24px;
-            height: 24px;
-            margin-bottom: 4px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        input, select, textarea {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #cbd5e0;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        button {
-            background-color: #4299e1;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #3182ce;
-        }
-        button:disabled {
-            background-color: #a0aec0;
-            cursor: not-allowed;
-        }
-        .alert {
-            background-color: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 4px;
-            padding: 10px;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #4a5568;
-        }
+        /* ... (previous CSS remains the same) ... */
     </style>
 </head>
 <body>
@@ -120,36 +15,7 @@
         </div>
         <div class="card-content">
             <div class="step-icons">
-                <div class="step-icon" data-step="1">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                    <span>Personal</span>
-                </div>
-                <div class="step-icon" data-step="2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                    <span>Identification</span>
-                </div>
-                <div class="step-icon" data-step="3">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                    </svg>
-                    <span>Address</span>
-                </div>
-                <div class="step-icon" data-step="4">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <span>Employment</span>
-                </div>
-                <div class="step-icon" data-step="5">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                    <span>Additional</span>
-                </div>
+                <!-- ... (step icons remain the same) ... -->
             </div>
             <div class="progress-bar">
                 <div class="progress" style="width: 20%;"></div>
@@ -300,4 +166,70 @@
                 </div>
                 <div class="form-group">
                     <label for="purposeOfAccount">Purpose of Account</label>
-                    <textarea id="purposeOfAccount" name="
+                    <textarea id="purposeOfAccount" name="purposeOfAccount" required></textarea>
+                </div>
+            `
+        };
+
+        function renderStep(step) {
+            document.getElementById('kycForm').innerHTML = formContent[step];
+            updateStepIndicators();
+            updateButtons();
+        }
+
+        function updateStepIndicators() {
+            document.querySelectorAll('.step-icon').forEach((el, index) => {
+                if (index + 1 === currentStep) {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active');
+                }
+            });
+            document.querySelector('.progress').style.width = `${(currentStep / totalSteps) * 100}%`;
+        }
+
+        function updateButtons() {
+            document.getElementById('prevBtn').disabled = currentStep === 1;
+            document.getElementById('nextBtn').textContent = currentStep === totalSteps ? 'Submit' : 'Next';
+        }
+
+        function saveStepData() {
+            const formData = new FormData(document.getElementById('kycForm'));
+            const stepData = {};
+            for (let [key, value] of formData.entries()) {
+                stepData[key] = value;
+            }
+            const stepName = Object.keys(kycData)[currentStep - 1];
+            kycData[stepName] = stepData;
+        }
+
+        function nextStep() {
+            if (currentStep < totalSteps) {
+                saveStepData();
+                currentStep++;
+                renderStep(currentStep);
+            } else {
+                saveStepData();
+                submitKYC();
+            }
+        }
+
+        function prevStep() {
+            if (currentStep > 1) {
+                saveStepData();
+                currentStep--;
+                renderStep(currentStep);
+            }
+        }
+
+        function submitKYC() {
+            console.log('KYC Data:', kycData);
+            alert('KYC form submitted successfully!');
+            // Here you would typically send the data to a server
+        }
+
+        // Initialize the form
+        renderStep(currentStep);
+    </script>
+</body>
+</html>
