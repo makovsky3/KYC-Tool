@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know Your Customer (KYC) Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f4f8;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .card-header {
+            background: linear-gradient(to right, #3490dc, #6574cd);
+            color: white;
+            padding: 20px;
+        }
+        .card-title {
+            margin: 0;
+            font-size: 24px;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-footer {
+            background-color: #f8fafc;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .progress-bar {
+            background-color: #e2e8f0;
+            height: 4px;
+            border-radius: 2px;
+            margin-bottom: 20px;
+        }
+        .progress {
+            background-color: #4299e1;
+            height: 100%;
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+        .step-icons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .step-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+            color: #a0aec0;
+        }
+        .step-icon.active {
+            color: #4299e1;
+        }
+        .step-icon svg {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 4px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4299e1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #3182ce;
+        }
+        button:disabled {
+            background-color: #a0aec0;
+            cursor: not-allowed;
+        }
+        .alert {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #4a5568;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <h1 class="card-title">Know Your Customer (KYC) Template</h1>
+        </div>
+        <div class="card-content">
+            <div class="step-icons">
+                <div class="step-icon" data-step="1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                    <span>Personal</span>
+                </div>
+                <div class="step-icon" data-step="2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <span>Identification</span>
+                </div>
+                <div class="step-icon" data-step="3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    <span>Address</span>
+                </div>
+                <div class="step-icon" data-step="4">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <span>Employment</span>
+                </div>
+                <div class="step-icon" data-step="5">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                    <span>Additional</span>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 20%;"></div>
+            </div>
+            <form id="kycForm">
+                <!-- Form content will be dynamically inserted here -->
+            </form>
+        </div>
+        <div class="card-footer">
+            <button id="prevBtn" onclick="prevStep()">Previous</button>
+            <button id="nextBtn" onclick="nextStep()">Next</button>
+        </div>
+        <div class="alert">
+            This KYC template is for guidance only. Always comply with your local regulatory requirements.
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1;
+        const totalSteps = 5;
+        const kycData = {
+            personalInfo: {},
+            identification: {},
+            addressInfo: {},
+            employmentInfo: {},
+            additionalInfo: {}
+        };
+
+        const formContent = {
+            1: `
+                <h2>Personal Information</h2>
+                <div class="form-group">
+                    <label for="fullName">Full Legal Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="dateOfBirth">Date of Birth</label>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                </div>
+                <div class="form-group">
+                    <label for="nationality">Nationality</label>
+                    <input type="text" id="nationality" name="nationality" required>
+                </div>
+                <div class="form-group">
+                    <label for="countryOfResidence">Country of Residence</label>
+                    <input type="text" id="countryOfResidence" name="countryOfResidence" required>
+                </div>
+            `,
+            2: `
+                <h2>Identification</h2>
+                <div class="form-group">
+                    <label for="idType">ID Type</label>
+                    <select id="idType" name="idType" required>
+                        <option value="">Select ID type</option>
+                        <option value="passport">Passport</option>
+                        <option value="nationalId">National ID</option>
+                        <option value="drivingLicense">Driving License</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="idNumber">ID Number</label>
+                    <input type="text" id="idNumber" name="idNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="idExpiryDate">ID Expiry Date</label>
+                    <input type="date" id="idExpiryDate" name="idExpiryDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="idIssueCountry">ID Issuing Country</label>
+                    <input type="text" id="idIssueCountry" name="idIssueCountry" required>
+                </div>
+            `,
+            3: `
+                <h2>Address Information</h2>
+                <div class="form-group">
+                    <label for="streetAddress">Street Address</label>
+                    <input type="text" id="streetAddress" name="streetAddress" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State/Province</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+                <div class="form-group">
+                    <label for="postalCode">Postal Code</label>
+                    <input type="text" id="postalCode" name="postalCode" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" required>
+                </div>
+            `,
+            4: `
+                <h2>Employment Information</h2>
+                <div class="form-group">
+                    <label for="employmentStatus">Employment Status</label>
+                    <select id="employmentStatus" name="employmentStatus" required>
+                        <option value="">Select employment status</option>
+                        <option value="employed">Employed</option>
+                        <option value="selfEmployed">Self-Employed</option>
+                        <option value="unemployed">Unemployed</option>
+                        <option value="retired">Retired</option>
+                        <option value="student">Student</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="occupation">Occupation</label>
+                    <input type="text" id="occupation" name="occupation" required>
+                </div>
+                <div class="form-group">
+                    <label for="employerName">Employer Name (if applicable)</label>
+                    <input type="text" id="employerName" name="employerName">
+                </div>
+                <div class="form-group">
+                    <label for="annualIncome">Annual Income Range</label>
+                    <select id="annualIncome" name="annualIncome" required>
+                        <option value="">Select income range</option>
+                        <option value="0-25000">$0 - $25,000</option>
+                        <option value="25001-50000">$25,001 - $50,000</option>
+                        <option value="50001-100000">$50,001 - $100,000</option>
+                        <option value="100001-250000">$100,001 - $250,000</option>
+                        <option value="250001+">$250,001+</option>
+                    </select>
+                </div>
+            `,
+            5: `
+                <h2>Additional Due Diligence</h2>
+                <div class="form-group">
+                    <label>Are you a Politically Exposed Person (PEP)?</label>
+                    <div>
+                        <label><input type="radio" name="isPEP" value="yes" required> Yes</label>
+                        <label><input type="radio" name="isPEP" value="no" required> No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="sourceOfFunds">Source of Funds</label>
+                    <select id="sourceOfFunds" name="sourceOfFunds" required>
+                        <option value="">Select source of funds</option>
+                        <option value="employment">Employment Income</option>
+                        <option value="business">Business Income</option>
+                        <option value="inheritance">Inheritance</option>
+                        <option value="investment">Investment Returns</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="purposeOfAccount">Purpose of Account</label>
+                    <textarea id="purposeOfAccount" name="
